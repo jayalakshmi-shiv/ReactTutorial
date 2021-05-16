@@ -11,14 +11,14 @@ export default class Counter extends React.Component {
     }
 
     // ************************* Mounting Phase ******************************
-    componentWillMount() {                                  //deprecated
-        console.log("inside component will mount");
-    }
-
-    // static getDerivedStateFromProps(props, state) {
-    //     console.log("inside get derived states from props", props, state);
-    //     return null;
+    // componentWillMount() {                                  //deprecated
+    //     console.log("inside component will mount");
     // }
+
+    static getDerivedStateFromProps(props, state) {
+        console.log("inside get derived states from props", props, state);
+        return null;
+    }
 
     // ************************* Update Phase *********************************
     componentDidMount() {
@@ -29,9 +29,9 @@ export default class Counter extends React.Component {
         console.log("inside component did update")
     }
 
-    componentWillReceiveProps(nextProps) {                   //deprecated
-        console.log("inside component will receive props", nextProps);
-    }
+    // componentWillReceiveProps(nextProps) {                   //deprecated
+    //     console.log("inside component will receive props", nextProps);
+    // }
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log("inside should component update", nextProps, nextState);
@@ -40,13 +40,13 @@ export default class Counter extends React.Component {
         return true;
     }
 
-    componentWillUpdate(nextProps, nextState) {              //deprecated
-        console.log("inside component will update", nextProps, nextState);
-    }
-    // getSnapshotBeforeUpdate(prevProps, prevState) {
-    //     console.log("inside should component update", prevProps, prevState);
-    //     return null;
+    // componentWillUpdate(nextProps, nextState) {              //deprecated
+    //     console.log("inside component will update", nextProps, nextState);
     // }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("inside get snapshot before update", prevProps, prevState);
+        return null;
+    }
 
     componentDidUpdate(prevProps, prevState) {
         console.log("inside component did update", prevProps, prevState);
@@ -61,7 +61,7 @@ export default class Counter extends React.Component {
     render() {
         console.log("inside render");
         return (
-            <div>
+            <div className="col">
                 <h1 style={{ textAlign: "initial" }}>{this.props.greet}</h1>
                 <div className="row">
                     <button onClick={() => this.setState({ ...this.state, counter: this.state.counter - 1 })} className={"btn btn-primary"}>-</button>
