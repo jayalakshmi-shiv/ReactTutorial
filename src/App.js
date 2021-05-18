@@ -6,8 +6,10 @@ function App() {
 
   const [counterValue, setCounterValue] = React.useState(0);
   const [counterMounted, setCounterMounted] = React.useState(true);
+  const [parentString, setParentString] = React.useState("I am displaying from parent")
   const [greet, setGreet] = React.useState("Welcome Guys!!!");
   let counterContainer = "";
+
   const onCounterUnmount = () => {
     setCounterMounted(!counterMounted);
   }
@@ -17,7 +19,7 @@ function App() {
   }, 3000)
 
   if (counterMounted) {
-    counterContainer = <Counter greet={greet} counterValue={counterValue} />;
+    counterContainer = <Counter greet={greet} counterValue={counterValue} parentString={parentString} updateParent={setParentString}/>;
   }
 
 
