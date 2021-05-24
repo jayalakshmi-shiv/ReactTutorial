@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from './Counter'
 import TrainingInfo from './TraineeList'
+import Registration from './Login/Login'
 import './App.css';
 
 function App() {
@@ -29,14 +30,15 @@ function App() {
 
   return (
     <div className="App" style={{ margin: "auto", width: "50%" }}>
-      <div>{counterContainer}</div>
+      <Registration/>
+      {/* <div>{counterContainer}</div>
       <br />
       <div style={{ textAlign: "left" }}>
         <button onClick={onCounterUnmount} className={"btn btn-primary"} >(Un)Mount</button>
       </div>
       <hr/>
       <br/>
-      <TrainingInfo trainees={trainee}/>
+      <TrainingInfo trainees={trainee}/> */}
     </div>
   );
 }
