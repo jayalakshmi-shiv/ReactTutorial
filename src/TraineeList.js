@@ -25,8 +25,10 @@ const useStyles = makeStyles({
 
 const TraineeList = (props) => {
     const classes = useStyles();
-
-    let trainees = props.trainees;
+    const trainees = [{ name: "Puttamraju Anirudh", id: "01" }, { name: "Akshaykumar M", id: "02" }, { name: "Bhumika Motawani", id: "03" },
+    { name: "Maram Sharvani", id: "04" }, { name: "Dibyendu Mondal", id: "05" }, { name: "Nilesh Singh", id: "06" }, { name: "Sai J", id: "07" },
+    { name: "Sivesh Kumar", id: "08" }, { name: "Shrutika Swadae", id: "09" }, { name: "Sonika", id: "10" }]
+   
     return (
             <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", }}>
                 {trainees.map((trainee) =>

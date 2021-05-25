@@ -1,4 +1,5 @@
 import React, {useState}from 'react'
+import './style.css'
 
 const Input = (props) =>{
     const [inputValue, setInputValue] = useState('');
@@ -10,7 +11,7 @@ const Input = (props) =>{
     
     return(
         <div>
-            <input style={{width: '250px',height: '50px',border: '1px solid gray'}}
+            <input class="InputContainer"
             name={inputValue} 
             onChange={updateInput}
             type={props.type}/>
