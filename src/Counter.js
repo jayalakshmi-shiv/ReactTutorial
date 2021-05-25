@@ -118,16 +118,12 @@ const Counter = (props) => {
 
     return (
         <div style={{ textAlign: "left" }}>
-            <h1>{props.greet}</h1>
+            <h1>Counter!!!</h1>
             <button onClick={() => setCounter(counter - 1)} className={"btn btn-primary"}>-</button>
             <span style={{ padding: "10px", fontSize: "30px" }}>{counter}</span>
             <button onClick={() => setCounter(counter + 1)} className={"btn btn-primary"}>+</button>
-            <br/>
-                <button onClick={() => setConditionalUpdate(true)} className={"btn btn-primary"}>Condition based update</button>
-            
-            <br/>
-            <button className={"btn btn-primary"} onClick={()=>props.updateParent("i am displaying from child")}>Update Parent</button>
-            <p>{props.parentString}</p>
+            <br/><br/>
+            <button onClick={() => setConditionalUpdate(true)} className={"btn btn-primary"}>Condition based update</button>
         </div>
     )
 }

@@ -4,9 +4,11 @@ import './style.css'
 const Button = (props) =>{
     return(
         <div>
-        <button class="ButtonContainer"onClick={props.loginDetails}> Login </button>
+            <button class="ButtonContainer" onClick={props.handleButton}> {props.buttonName} </button>
         </div>
     )
 }
 
 export default Button;
+
+

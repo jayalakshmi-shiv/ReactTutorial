@@ -24,7 +24,7 @@ const Login = () =>{
             <br/>
             Password:<Input name={"password"} value={''} type={'password'} updateField={updateLoginDetail}/>
             <br/>
-            <Button loginDetails={loginDetails}/>
+            <Button handleButton={loginDetails} buttonName={"Login"}/>
         </div>
     )
 }
