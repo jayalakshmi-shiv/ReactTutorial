@@ -2,12 +2,12 @@ import React, {useState}from 'react'
 import './style.css'
 
  /**
-  * Factory function to create a ShallowWrapper for the App component.
-  * @function setup
-  * @param {object} props - Component props specific to this setup.
-  * @returns {ShallowWrapper}
+  * Factory function to create a Input component.
+  * @function Input
+  * @param {object} props - name, value
+  * @returns Input component
   */
- 
+
 const Input = (props) =>{
     const [inputValue, setInputValue] = useState('');
     const updateInput = (e) =>{
