@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
-import Input from '../Components/Input/Input';
-import Button from '../Components/Button/Button'
+import Input from '../../Components/Input/Input';
+import Button from '../../Components/Button/Button'
 
 const Login = () =>{
     const [loginDetail, setLoginDetail] = useState({name:'',password:''});

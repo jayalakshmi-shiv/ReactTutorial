@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Counter from './Counter'
-import TrainingInfo from './TraineeList'
-import Login from './Login/Login';
+import Counter from './Containers/Counter'
+import TrainingInfo from './Containers/TraineeList'
+import Login from './Containers/Login/Login';
+import ParentComponent from './Containers/PureComponent/ParentComponent';
+import HocParent from './Containers/HOC/HocParent'
+
 import NotFound from './NotFound'
 import './App.css';
 
@@ -14,6 +17,8 @@ function App() {
           <Route exact path='/' component={Login} />
           <Route exact path='/counter' component={Counter} />
           <Route exact path='/trainingInfo' component={TrainingInfo} />
+          <Route exact path='/pureComponent' component={ParentComponent}/>
+          <Route exact path='/HOC' component={HocParent}/>
           <Route component={NotFound}/>
         </Switch>
       </Router>
