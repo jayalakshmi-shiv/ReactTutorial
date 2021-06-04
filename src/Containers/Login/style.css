@@ -1,5 +1,12 @@
 .loginContainer{
-    background-image:"url('https://img.freepik.com/free-vector/abstract-paper-hexagon-white-background_51543-7.jpg?size=626&ext=jpg')";
-    height:'100vh';
-    padding-top:"100px"
+    background-image:url('https://i.redd.it/y1ostvqnr4711.jpg');
+    height:100vh;
+    padding-top:230px;
+}
+
+.loginWrapper{
+    margin: auto;
+    width: 20%;
+    border: 1px dashed black;
+    padding: 50px;
 }

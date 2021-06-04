@@ -1,4 +1,4 @@
-import React, {useEffect,useMemo,useState} from 'react'
+import React, {useEffect,useState} from 'react'
 
 // class Counter extends React.Component {
 //     constructor(props) {
@@ -104,7 +104,7 @@ const Counter = (props) => {
 
 
     return (
-        <div style={{ textAlign: "left" }}>
+        <div >
             <h1>{props.greet}</h1>
             <button onClick={() => setCounter(counter - 1)} className={"btn btn-primary"}>-</button>
             <span style={{ padding: "10px", fontSize: "30px" }}>{counter}</span>
@@ -113,8 +113,8 @@ const Counter = (props) => {
                 <button onClick={() => setConditionalUpdate(true)} className={"btn btn-primary"}>Condition based update</button>
             
             <br/>
-            {/* <button className={"btn btn-primary"} onClick={()=>props.updateParent("i am displaying from child")}>Update Parent</button>
-            <p>{props.parentString}</p> */}
+            <button className={"btn btn-primary"} onClick={()=>props.updateParent("i am displaying from child")}>Update Parent</button>
+            <p>{props.parentString}</p>
         </div>
     )
 }
