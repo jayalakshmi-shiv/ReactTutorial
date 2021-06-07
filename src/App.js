@@ -1,41 +1,25 @@
-import React from 'react';
-import Counter from './Containers/Login/Counter/Counter'
-import Input from './Components/Input/Input'
-import Login from './Containers/Login/Login'
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from './Containers/Login/Login'
+import Counter from './Containers/Counter/Counter'
+import HocParent from './Containers/HOC/HocParent'
+import ParentComponent from './Containers/PureComponent/ParentComponent'
+import NotFound from './NotFound'
+
 
 function App() {
-  const [greet, setGreet] = React.useState("Welcome Guys!!!");
-  const [parent, setParent] = React.useState("I am displaying from parent");
-  const [counterMounted, setCounterMounted] = React.useState(true);
-  let counterContainer = "";
-
-  const onCounterUnmount = () => {
-    setCounterMounted(!counterMounted);
-  }
-
-  const updateParent = (value) =>{
-    setParent(value);
-  }
-
-  setTimeout(() => {
-    setGreet("I have updated from parent component")
-  }, 3000)
-
-  if (counterMounted) {
-    counterContainer = <Counter greet={greet} parentString={parent} updateParent={updateParent}/>;
-  }
-
   return (
-    <div className="App" style={{margin:'auto'}}>
-       {/* <div>{counterContainer}</div>
-      <br />
-      <div>
-        <button onClick={onCounterUnmount} className={"btn btn-primary"} >(Un)Mount</button>
-      </div>
-      <br/>
-    <Input/> */}
-    <Login/>
+    <div className="App" style={{display:"flex"}}>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Counter} />
+          <Route exact path='/counter' component={Counter} />
+          <Route exact path='/hoc' component={HocParent} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/pureComponent' component={ParentComponent} />
+          <Route component={NotFound}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
