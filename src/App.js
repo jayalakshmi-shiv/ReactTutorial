@@ -1,7 +1,8 @@
 import React from 'react';
-import Counter from './Containers/Login/Counter/Counter'
+import Counter from './Containers/Counter/Counter'
 import Input from './Components/Input/Input'
 import Login from './Containers/Login/Login'
+import TrainingInfo from './Containers/CodeOptimisation/TraineeList'
 import './App.css';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{margin:'auto'}}>
+    <div className="App">
        {/* <div>{counterContainer}</div>
       <br />
       <div>
@@ -35,7 +36,7 @@ function App() {
       </div>
       <br/>
     <Input/> */}
-    <Login/>
+    <TrainingInfo/>
     </div>
   );
 }
