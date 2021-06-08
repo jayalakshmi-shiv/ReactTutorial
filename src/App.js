@@ -9,7 +9,7 @@ import NotFound from './NotFound'
 
 function App() {
   return (
-    <div className="App" style={{display:"flex"}}>
+    <div className="App" >
       <Router>
         <Switch>
           <Route exact path='/' component={Counter} />

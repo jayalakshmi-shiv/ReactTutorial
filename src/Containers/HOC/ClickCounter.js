@@ -3,7 +3,6 @@ import withCounter from './withCounter';
 
 class ClickCounter extends Component {
     render(){
-    console.log("inside vounter")
 
         const {count, incrementCount} = this.props;
         return(
